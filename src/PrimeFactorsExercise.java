@@ -1,5 +1,5 @@
 /**
- * Created by zhangyu on 2015/7/20.
+ * Created by yaowenjie on 2015/7/20.
  */
 public class PrimeFactorsExercise {
     public static void main(String[] args) {
