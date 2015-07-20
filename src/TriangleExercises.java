@@ -14,43 +14,6 @@ public class TriangleExercises {
         drawADiamondWithName(7, "Yaowenjie");
     }
 
-    private static void drawADiamondWithName(int n, String name) {
-        for (int i=1;i<=2*n-1;i++){
-            if(i==n){
-                System.out.print(name);
-            }
-            else{
-                int index = abs(n-i);
-                int length = 2*n-1-2*index;
-                drawALineWithIndex(index,length);
-            }
-            System.out.println("");
-        }
-    }
-
-    private static void drawADiamond(int n) {
-        for (int i=1;i<=2*n-1;i++){
-            int index = abs(n-i);
-            int length = 2*n-1-2*index;
-            drawALineWithIndex(index,length);
-            System.out.println("");
-        }
-    }
-
-    private static void drawAIsoscelesTriangle(int n) {
-        for (int i=0;i<n;i++){
-            drawALineWithIndex(n-i-1,2*i+1);
-            System.out.println("");
-        }
-    }
-
-    private static void drawALineWithIndex(int index, int length) {
-        for(int i=0;i<index+length;i++){
-            if(i<index) System.out.print(" ");
-            else System.out.print("*");
-        }
-    }
-
     public static void drawAHorizontalLine(int n){
         for(int i=0;i<n;i++){
             System.out.print("*");
@@ -67,6 +30,43 @@ public class TriangleExercises {
     public static void drawARightTriangle(int n){
         for(int i=0;i<n;i++){
             drawAHorizontalLine(i+1);
+        }
+    }
+
+    private static void drawALineWithIndex(int index, int length) {
+        for(int i=0;i<index+length;i++){
+            if(i<index) System.out.print(" ");
+            else System.out.print("*");
+        }
+    }
+
+    private static void drawAIsoscelesTriangle(int n) {
+        for (int i=0;i<n;i++){
+            drawALineWithIndex(n-i-1,2*i+1);
+            System.out.println("");
+        }
+    }
+
+    private static void drawADiamond(int n) {
+        for (int i=1;i<=2*n-1;i++){
+            int index = abs(n-i);
+            int length = 2*n-1-2*index;
+            drawALineWithIndex(index,length);
+            System.out.println("");
+        }
+    }
+
+    private static void drawADiamondWithName(int n, String name) {
+        for (int i=1;i<=2*n-1;i++){
+            if(i==n){
+                System.out.print(name);
+            }
+            else{
+                int index = abs(n-i);
+                int length = 2*n-1-2*index;
+                drawALineWithIndex(index,length);
+            }
+            System.out.println("");
         }
     }
 }
