@@ -10,7 +10,22 @@ public class TriangleExercises {
 //        drawAVerticalLine(8);
 //        drawARightTriangle(8);
 //        drawAIsoscelesTriangle(5);
-        drawADiamond(10);
+//        drawADiamond(10);
+        drawADiamondWithName(7, "Yaowenjie");
+    }
+
+    private static void drawADiamondWithName(int n, String name) {
+        for (int i=1;i<=2*n-1;i++){
+            if(i==n){
+                System.out.print(name);
+            }
+            else{
+                int index = abs(n-i);
+                int length = 2*n-1-2*index;
+                drawALineWithIndex(index,length);
+            }
+            System.out.println("");
+        }
     }
 
     private static void drawADiamond(int n) {
