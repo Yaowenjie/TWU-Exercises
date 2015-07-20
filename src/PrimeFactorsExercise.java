@@ -3,15 +3,15 @@
  */
 public class PrimeFactorsExercise {
     public static void main(String[] args) {
-        generate(59);
+        generate(30);
     }
 
     private static void generate(int n) {
         if(n==1) System.out.println();
         else {
             for (int i = 2; i < n; i++) {
-                for (int j =  2; j < n; j++) {
-                    if (i * j == n && isPrime(i)) System.out.println(i);
+                if(n%i==0 && isPrime(i)){
+                    System.out.print(i+"  ");
                 }
             }
         }
