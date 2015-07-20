@@ -6,7 +6,22 @@ public class TriangleExercises {
 //        System.out.println("*");
 //        drawAHorizontalLine(10);
 //        drawAVerticalLine(8);
-        drawARightTriangle(8);
+//        drawARightTriangle(8);
+        drawAIsoscelesTriangle(5);
+    }
+
+    private static void drawAIsoscelesTriangle(int n) {
+        for (int i=0;i<n;i++){
+            drawALineWithIndex(n-i-1,2*i+1);
+            System.out.println("");
+        }
+    }
+
+    private static void drawALineWithIndex(int index, int length) {
+        for(int i=0;i<index+length;i++){
+            if(i<index) System.out.print(" ");
+            else System.out.print("*");
+        }
     }
 
     public static void drawAHorizontalLine(int n){
